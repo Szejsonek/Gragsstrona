@@ -1,4 +1,4 @@
-/* Stylizacja sekcji historii */
+/* Główne style dla strony historii */
 .history-hero {
     background: linear-gradient(rgba(20, 20, 20, 0.85), rgba(20, 20, 20, 0.85)), 
                 url('../images/historia/tlo-historia.jpg') no-repeat center center/cover;
@@ -9,48 +9,195 @@
     text-align: center;
     color: white;
     padding: 2rem;
+    position: relative;
 }
 
 .history-content {
-    max-width: 800px;
+    max-width: 900px;
     padding: 3rem;
-    background-color: rgba(255, 255, 255, 0.93);
+    background-color: rgba(255, 255, 255, 0.95);
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     color: #333;
     line-height: 1.8;
+    margin: 2rem auto;
 }
 
 .history-content h2 {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+    border-bottom: 2px solid #f39c12;
+    padding-bottom: 1rem;
+}
+
+/* Style dla tekstu historycznego */
+.history-text {
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.history-text p {
+    margin-bottom: 1.8rem;
+    text-align: justify;
+}
+
+.lead {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* Elementy osi czasu */
+.timeline-item {
+    padding: 2rem;
+    margin: 2rem 0;
+    border-left: 4px solid #f39c12;
+    background-color: rgba(243, 156, 18, 0.05);
+    border-radius: 0 8px 8px 0;
+}
+
+.timeline-item h3 {
+    color: #e74c3c;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.highlight {
+    background-color: rgba(231, 76, 60, 0.08);
+    border-left-color: #e74c3c;
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.1);
+}
+
+/* Style dla postaci */
+.villain {
+    color: #c0392b;
+    font-weight: bold;
+    text-shadow: 0 0 1px rgba(192, 57, 43, 0.2);
+}
+
+.hero {
+    color: #27ae60;
+    font-weight: bold;
+    text-shadow: 0 0 1px rgba(39, 174, 96, 0.2);
+}
+
+/* Opis bitwy */
+.battle-description {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin: 3rem 0;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.battle-image {
+    width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border: 3px solid white;
+}
+
+/* Cytaty */
+.epic-quote {
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #2c3e50;
+    border-left: 4px solid #f39c12;
+    padding-left: 2rem;
+    margin: 3rem 0;
+    line-height: 1.6;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 1.5rem;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Boxy specjalne */
+.ideals-box {
+    background-color: rgba(46, 204, 113, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px dashed #2ecc71;
+    margin: 3rem 0;
+    font-size: 1.1rem;
+}
+
+.dark-chapter {
+    background-color: rgba(44, 62, 80, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 3rem 0;
+    border-left: 4px solid #2c3e50;
+}
+
+.dark-chapter h3 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+/* Zakończenie */
+.conclusion {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid #f39c12;
+    font-size: 1.1rem;
+}
+
+.cliffhanger {
+    font-style: italic;
+    color: #7f8c8d;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.2rem;
 }
 
 /* Sekcja żon */
 .wives-section {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
     text-align: center;
 }
 
 .wives-section h2 {
-    color: var(--primary-color);
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.wives-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #f39c12;
 }
 
 .wives-section p {
     color: #555;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     max-width: 700px;
-    margin: 0 auto 2rem;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
 }
 
 .wives-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -59,8 +206,9 @@
     background: white;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 .wife-card:hover {
@@ -70,28 +218,108 @@
 
 .wife-image {
     width: 100%;
-    height: 250px;
+    height: 300px;
     object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.wife-card:hover .wife-image {
+    transform: scale(1.05);
 }
 
 .wife-info {
-    padding: 1.5rem;
-    text-align: left;
+    padding: 2rem;
+    text-align: center;
 }
 
 .wife-info h3 {
-    color: var(--secondary-color);
-    margin-bottom: 0.5rem;
+    color: #e74c3c;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.wife-info p {
+    color: #666;
+    line-height: 1.6;
 }
 
 /* Responsywność */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .history-content {
         padding: 2rem;
+    }
+    
+    .battle-description {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .battle-image {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .history-hero {
+        min-height: 80vh;
+        padding: 1rem;
+    }
+    
+    .history-content {
         margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .wives-section {
+        padding: 3rem 1rem;
     }
     
     .wives-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .timeline-item {
+        padding: 1.5rem;
     }
 }
+
+@media (max-width: 480px) {
+    .history-content h2 {
+        font-size: 2rem;
+    }
+    
+    .timeline-item h3 {
+        font-size: 1.3rem;
+    }
+    
+    .epic-quote {
+        font-size: 1.1rem;
+        padding-left: 1rem;
+    }
+    
+    .wife-info {
+        padding: 1.5rem;
+    }
+}
+
+/* Animacje */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.timeline-item, .battle-description, .epic-quote, .ideals-box, .dark-chapter {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Opóźnienia animacji */
+.timeline-item:nth-child(1) { animation-delay: 0.1s; }
+.timeline-item:nth-child(2) { animation-delay: 0.3s; }
+.battle-description { animation-delay: 0.5s; }
+.epic-quote { animation-delay: 0.7s; }
+.ideals-box { animation-delay: 0.9s; }
+.dark-chapter { animation-delay: 1.1s; }
+.conclusion { animation-delay: 1.3s; }
