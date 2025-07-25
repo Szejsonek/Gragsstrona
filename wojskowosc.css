@@ -1,1 +1,136 @@
+/* STYL GŁÓWNY */
+.military-page {
+    background: #0a0a0a;
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+}
 
+/* HIERARCHIA DOWODZENIA */
+.command-hierarchy {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.command-hierarchy h2 {
+    font-family: 'Cinzel', serif;
+    color: #D4AF37;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid #D4AF37;
+    padding-bottom: 1rem;
+}
+
+/* KARTY STOPNI */
+.rank-card {
+    background: rgba(30, 30, 30, 0.8);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #444;
+}
+
+.rank-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+    border-color: #D4AF37;
+}
+
+/* MARSZAŁEK - SPECJALNE STYLE */
+.marshal {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    background: linear-gradient(135deg, rgba(20,20,20,0.9), rgba(40,40,40,0.9));
+    border: 2px solid #D4AF37;
+}
+
+.marshal .rank-badge {
+    font-size: 4rem;
+    text-align: center;
+    color: #D4AF37;
+    margin-bottom: 1rem;
+}
+
+.marshal h3 {
+    color: #D4AF37;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.marshal .rank-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+/* GENERAŁOWIE */
+.generals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.general {
+    position: relative;
+}
+
+.general h3 {
+    color: #A8E6CF;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.general .rank-name {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #F5D742;
+    margin-bottom: 1rem;
+}
+
+.general .specialization {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+}
+
+/* DETALE */
+.rank-details {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed #444;
+}
+
+.rank-details p {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.rank-details p::before {
+    content: "•";
+    color: #D4AF37;
+    position: absolute;
+    left: 0;
+}
+
+/* RESPONSYWNOŚĆ */
+@media (max-width: 768px) {
+    .generals-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .marshal {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
