@@ -1,0 +1,97 @@
+/* Stylizacja sekcji historii */
+.history-hero {
+    background: linear-gradient(rgba(20, 20, 20, 0.85), rgba(20, 20, 20, 0.85)), 
+                url('../images/historia/tlo-historia.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.history-content {
+    max-width: 800px;
+    padding: 3rem;
+    background-color: rgba(255, 255, 255, 0.93);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: #333;
+    line-height: 1.8;
+}
+
+.history-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+}
+
+/* Sekcja żon */
+.wives-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.wives-section h2 {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.wives-section p {
+    color: #555;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.wives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wife-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.wife-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.wife-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.wife-info {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.wife-info h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .history-content {
+        padding: 2rem;
+        margin: 1rem;
+    }
+    
+    .wives-grid {
+        grid-template-columns: 1fr;
+    }
+}
