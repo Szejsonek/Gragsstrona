@@ -1,165 +1,103 @@
-/* PEŁNOSTRONICOWE TŁO */
+/* PEŁNOSTRONICOWE TŁO Z EFEKTEM PRZYCIEMNIENIA */
 .history-page {
-    background: url('../images/historia/tlo-historia.jpg') no-repeat center center fixed;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.7), 
+        url('../images/historia/tlo-historia.jpg') no-repeat center center fixed;
     background-size: cover;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    color: #333;
-    font-family: 'Georgia', serif;
-    line-height: 1.6;
+    color: #f5d742; /* Złoty kolor tekstu */
+    font-family: 'Cinzel', 'Georgia', serif; /* Elegancka czcionka */
+    line-height: 1.8;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* PRZEZROCZYSTA NAWIGACJA */
-.history-header {
-    background: rgba(44, 62, 80, 0.9);
-    padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    color: white;
-}
-
-.history-header .logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.history-header .logo {
-    height: 60px;
-    margin-right: 1rem;
-}
-
-/* GŁÓWNA ZAWARTOŚĆ */
-.history-main {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
-
+/* BARDZIEJ PRZEZROCZYSTE TŁO TREŚCI */
 .history-content {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.15); /* Bardziej przejrzyste */
+    backdrop-filter: blur(5px); /* Efekt lekkiego rozmycia */
+    border: 1px solid rgba(245, 215, 66, 0.3); /* Złota obwódka */
     max-width: 900px;
     width: 100%;
     padding: 3rem;
     border-radius: 15px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     margin: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
+/* STYLIZACJA TEKSTU */
 .history-content h2 {
-    color: #2c3e50;
+    color: #f5d742;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 2.8rem;
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    border-bottom: 2px solid #f39c12;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgba(245, 215, 66, 0.5);
     padding-bottom: 1rem;
 }
 
-/* STYLE TEKSTU */
 .lead {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
-    margin: 2rem 0;
-    color: #2c3e50;
+    margin: 3rem 0;
+    color: #f5d742;
+    letter-spacing: 0.5px;
 }
 
 .timeline-item {
     padding: 2rem;
-    margin: 2rem 0;
-    border-left: 4px solid #f39c12;
-    background: rgba(243, 156, 18, 0.05);
+    margin: 3rem 0;
+    background: rgba(20, 20, 20, 0.4); /* Ciemne tło dla lepszej czytelności */
+    border-left: 4px solid #f5d742;
+    border-radius: 0 8px 8px 0;
 }
 
+.timeline-item h3 {
+    color: #f5d742;
+    font-size: 1.8rem;
+    margin-top: 0;
+    font-family: 'Cinzel', serif;
+}
+
+/* DODATKOWE ELEMENTY STYLIZACYJNE */
 .highlight {
-    background: rgba(231, 76, 60, 0.08);
-    border-left-color: #e74c3c;
+    background: rgba(100, 80, 0, 0.3); /* Złote tło dla wyróżnionych sekcji */
+    box-shadow: 0 0 15px rgba(245, 215, 66, 0.2);
 }
 
 .villain {
-    color: #c0392b;
+    color: #ff6b6b;
     font-weight: bold;
 }
 
 .hero {
-    color: #27ae60;
+    color: #a8e6cf;
     font-weight: bold;
-}
-
-.battle-description {
-    display: flex;
-    gap: 2rem;
-    margin: 2rem 0;
-    align-items: center;
-}
-
-.battle-image {
-    width: 300px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .epic-quote {
     font-style: italic;
-    font-size: 1.3rem;
-    padding: 1.5rem;
-    border-left: 4px solid #f39c12;
-    background: rgba(255, 255, 255, 0.7);
-    margin: 2rem 0;
-}
-
-.ideals-box {
-    background: rgba(46, 204, 113, 0.1);
-    padding: 1.5rem;
-    border: 1px dashed #2ecc71;
-    border-radius: 8px;
-    margin: 2rem 0;
-}
-
-.dark-chapter {
-    background: rgba(44, 62, 80, 0.1);
+    font-size: 1.5rem;
     padding: 2rem;
-    border-radius: 8px;
-    margin: 2rem 0;
-}
-
-.conclusion {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 2px solid #f39c12;
-}
-
-.cliffhanger {
-    font-style: italic;
-    color: #7f8c8d;
-    text-align: center;
-    font-weight: bold;
-}
-
-/* STOPKA */
-.history-footer {
-    background: rgba(44, 62, 80, 0.9);
-    color: white;
-    padding: 2rem;
+    border-left: 4px solid #f5d742;
+    background: rgba(0, 0, 0, 0.3);
+    margin: 3rem 0;
     text-align: center;
 }
 
 /* RESPONSYWNOŚĆ */
 @media (max-width: 768px) {
-    .battle-description {
-        flex-direction: column;
-    }
-    
-    .battle-image {
-        width: 100%;
-        margin-bottom: 1rem;
-    }
-    
     .history-content {
-        padding: 2rem;
+        padding: 1.5rem;
         margin: 1rem;
+        backdrop-filter: blur(3px);
+    }
+    
+    .history-content h2 {
+        font-size: 2rem;
     }
 }
