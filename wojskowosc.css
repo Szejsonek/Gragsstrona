@@ -1,15 +1,112 @@
-/* STYL GŁÓWNY */
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* STRONA */
 .military-page {
     background: #0a0a0a;
     color: #e0e0e0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Marcellus', serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* HIERARCHIA DOWODZENIA */
+/* NAGŁÓWEK */
+.military-header {
+    background: rgba(44, 62, 80, 0.9);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #D4AF37;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 60px;
+    margin-right: 1rem;
+}
+
+.military-header h1 {
+    font-family: 'Cinzel', serif;
+    color: #D4AF37;
+    font-size: 1.8rem;
+}
+
+/* MENU NAWIGACYJNE */
+nav {
+    background: rgba(44, 62, 80, 0.9);
+    padding: 1rem 0;
+    margin-top: 1rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    gap: 2rem;
+}
+
+nav a {
+    color: #D4AF37;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #F5D742;
+}
+
+nav a.active {
+    font-weight: 700;
+    color: #F5D742;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #F5D742;
+    transition: width 0.3s;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+/* GŁÓWNA ZAWARTOŚĆ */
+.military-main {
+    flex: 1;
+    padding: 2rem;
+}
+
 .command-hierarchy {
     max-width: 1200px;
-    margin: 2rem auto;
-    padding: 1rem;
+    margin: 0 auto;
 }
 
 .command-hierarchy h2 {
@@ -26,12 +123,11 @@
 .rank-card {
     background: rgba(30, 30, 30, 0.8);
     border-radius: 10px;
-    padding: 2rem;
     margin-bottom: 2rem;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
     border: 1px solid #444;
+    display: flex;
+    overflow: hidden;
 }
 
 .rank-card:hover {
@@ -40,70 +136,71 @@
     border-color: #D4AF37;
 }
 
-/* MARSZAŁEK - SPECJALNE STYLE */
-.marshal {
-    max-width: 800px;
-    margin: 0 auto 3rem;
-    background: linear-gradient(135deg, rgba(20,20,20,0.9), rgba(40,40,40,0.9));
-    border: 2px solid #D4AF37;
+/* PORTERTY */
+.rank-portrait {
+    width: 250px;
+    position: relative;
+    flex-shrink: 0;
 }
 
-.marshal .rank-badge {
-    font-size: 4rem;
-    text-align: center;
-    color: #D4AF37;
-    margin-bottom: 1rem;
+.rank-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.marshal h3 {
+.rank-badge, .specialization {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.rank-badge {
+    bottom: 20px;
+    right: 20px;
     color: #D4AF37;
     font-size: 2rem;
-    text-align: center;
-    margin-bottom: 0.5rem;
+}
+
+.specialization {
+    top: 20px;
+    right: 20px;
+}
+
+/* ZAWARTOŚĆ KART */
+.rank-content {
+    padding: 2rem;
+    flex-grow: 1;
+}
+
+.marshal .rank-content {
+    padding: 3rem;
+}
+
+.rank-name {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    color: #F5D742;
+    margin: 0.5rem 0 1.5rem;
+    font-size: 1.5rem;
 }
 
 .marshal .rank-name {
-    font-family: 'Cinzel', serif;
     font-size: 1.8rem;
-    text-align: center;
-    color: #fff;
+}
+
+.rank-desc {
+    color: #A8E6CF;
+    font-style: italic;
     margin-bottom: 1.5rem;
 }
 
-/* GENERAŁOWIE */
-.generals-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-}
-
-.general {
-    position: relative;
-}
-
-.general h3 {
-    color: #A8E6CF;
-    font-size: 1.5rem;
-    border-bottom: 1px solid #444;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.general .rank-name {
-    font-weight: bold;
-    font-size: 1.3rem;
-    color: #F5D742;
-    margin-bottom: 1rem;
-}
-
-.general .specialization {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 2rem;
-}
-
-/* DETALE */
 .rank-details {
     margin-top: 1.5rem;
     padding-top: 1.5rem;
@@ -123,14 +220,67 @@
     left: 0;
 }
 
+/* GENERAŁOWIE */
+.generals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 2rem;
+}
+
+.general h3 {
+    color: #A8E6CF;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* MARSZAŁEK - SPECJALNE STYLE */
+.marshal {
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+    background: linear-gradient(135deg, rgba(20,20,20,0.9), rgba(40,40,40,0.9));
+    border: 2px solid #D4AF37;
+}
+
+/* STOPKA */
+.military-footer {
+    background: rgba(20, 20, 20, 0.95);
+    color: #D4AF37;
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid #D4AF37;
+    font-family: 'Cinzel', serif;
+}
+
 /* RESPONSYWNOŚĆ */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    .rank-card {
+        flex-direction: column;
+    }
+    
+    .rank-portrait {
+        width: 100%;
+        height: 300px;
+    }
+    
     .generals-grid {
         grid-template-columns: 1fr;
     }
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
     
-    .marshal {
-        margin-left: 1rem;
-        margin-right: 1rem;
+    .rank-content {
+        padding: 1.5rem;
+    }
+    
+    .marshal .rank-content {
+        padding: 2rem;
     }
 }
