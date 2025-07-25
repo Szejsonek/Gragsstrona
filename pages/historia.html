@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historia - Wielkie Księstwo Gragasowe</title>
     <link rel="stylesheet" href="../style.css">
+    <!-- Dodatkowy CSS tylko dla tej podstrony -->
+    <link rel="stylesheet" href="../historia.css">
     <link rel="icon" href="../images/herb.png" type="image/png">
 </head>
 <body>
@@ -24,64 +26,52 @@
         </nav>
     </header>
 
-    <section class="page-header">
-        <h2>Historia Wielkiego Księstwa Gragasowego</h2>
-        <p>Poznaj bogatą przeszłość naszego wspaniałego księstwa</p>
+    <!-- Sekcja z tłem i historią -->
+    <section class="history-hero">
+        <div class="history-content">
+            <!-- MIEJSCE NA TWOJĄ HISTORIĘ -->
+            <h2>Dzieje Księstwa</h2>
+            <p>Tutaj wklej swoją historię. Przykładowy tekst:</p>
+            <p>Wielkie Księstwo Gragasowe powstało w 1023 roku, gdy legendarny założyciel Gragas I Zjednoczyciel pokonał plemiona północy...</p>
+            <p>W okresie złotego wieku (1567-1602) księstwo osiągnęło szczyt potęgi...</p>
+            <!-- KONIEC HISTORII -->
+        </div>
     </section>
 
-    <section class="page-content">
-        <h2>Dzieje naszego księstwa</h2>
-        <p>Wielkie Księstwo Gragasowe ma ponad tysiącletnią historię, pełną chwały, trudów i zwycięstw. Nasza ziemia była świadkiem wielkich bitew, okresów rozkwitu i momentów próby.</p>
+    <!-- Sekcja z żonami -->
+    <section class="wives-section">
+        <h2>Żony Gragasa</h2>
+        <p>Poznaj wpływowe kobiety które kształtowały historię księstwa</p>
         
-        <div class="timeline" id="timelineContainer">
-            <!-- Timeline will be loaded dynamically from JavaScript -->
-        </div>
-
-        <h2>Władcy Gragasowi</h2>
-        <p>Przez wieki naszym księstwem rządziło wiele wybitnych osobistości. Oto niektóre z nich:</p>
-        
-        <div class="rulers-grid">
-            <div class="ruler-card">
-                <img src="../images/gragas1.jpg" alt="Gragas I Założyciel">
-                <h3>Gragas I Założyciel (1023-1056)</h3>
-                <p>Zjednoczył plemiona i założył Księstwo. Legendarny wojownik i mąż stanu.</p>
+        <div class="wives-grid">
+            <div class="wife-card">
+                <img src="../images/historia/zona1.jpg" alt="Pierwsza żona" class="wife-image">
+                <div class="wife-info">
+                    <h3>Ludwika z Doliny</h3>
+                    <p>Pierwsza małżonka Gragasa I, matka następcy tronu. Znana z reform edukacyjnych.</p>
+                </div>
             </div>
-            <div class="ruler-card">
-                <img src="../images/gragas3.jpg" alt="Gragas III Wielki">
-                <h3>Gragas III Wielki (1240-1289)</h3>
-                <p>Rozszerzył granice Księstwa i ustanowił pierwszy kodeks praw.</p>
+            
+            <div class="wife-card">
+                <img src="../images/historia/zona2.jpg" alt="Druga żona" class="wife-image">
+                <div class="wife-info">
+                    <h3>Elżbieta Błyskawica</h3>
+                    <p>Wojownicza królowa, dowodziła obroną twierdzy podczas wielkiego oblężenia.</p>
+                </div>
             </div>
-            <div class="ruler-card">
-                <img src="../images/gragas7.jpg" alt="Gragas VII Oświecony">
-                <h3>Gragas VII Oświecony (1560-1602)</h3>
-                <p>Mecenas sztuki i nauki. Założył Akademię Gragasową.</p>
+            
+            <div class="wife-card">
+                <img src="../images/historia/zona3.jpg" alt="Trzecia żona" class="wife-image">
+                <div class="wife-info">
+                    <h3>Anna Szafranowa</h3>
+                    <p>Mecenaska sztuki, założycielka słynnej biblioteki królewskiej.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>O Księstwie</h3>
-                <p>Wielkie Księstwo Gragasowe to kwitnąca kraina z bogatą historią i kulturą.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Kontakt</h3>
-                <p>Email: kontakt@gragasowe.ks</p>
-                <p>Telefon: +48 123 456 789</p>
-            </div>
-            <div class="footer-section">
-                <h3>Social Media</h3>
-                <div class="social-icons">
-                    <a href="#"><img src="../images/facebook-icon.png" alt="Facebook"></a>
-                    <a href="#"><img src="../images/twitter-icon.png" alt="Twitter"></a>
-                    <a href="#"><img src="../images/instagram-icon.png" alt="Instagram"></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 Wielkie Księstwo Gragasowe. Wszelkie prawa zastrzeżone.</p>
-        </div>
+        <!-- Stopka taka sama jak na index.html -->
     </footer>
 
     <script src="../script.js"></script>
