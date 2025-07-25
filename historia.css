@@ -1,103 +1,157 @@
-/* PEŁNOSTRONICOWE TŁO Z EFEKTEM PRZYCIEMNIENIA */
+/* GOOGLE FONTS - IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Marcellus&display=swap');
+
+/* GŁÓWNE STYLE */
 .history-page {
     background: 
         linear-gradient(rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.7)), 
         url('../images/historia/tlo-historia.jpg') no-repeat center center fixed;
     background-size: cover;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    color: #f5d742; /* Złoty kolor tekstu */
-    font-family: 'Cinzel', 'Georgia', serif; /* Elegancka czcionka */
+    color: #D4AF37; /* Złoty kolor */
+    font-family: 'Marcellus', serif;
     line-height: 1.8;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    padding: 0;
+    margin: 0;
 }
 
-/* BARDZIEJ PRZEZROCZYSTE TŁO TREŚCI */
-.history-content {
-    background: rgba(255, 255, 255, 0.15); /* Bardziej przejrzyste */
-    backdrop-filter: blur(5px); /* Efekt lekkiego rozmycia */
-    border: 1px solid rgba(245, 215, 66, 0.3); /* Złota obwódka */
+/* NAGŁÓWEK */
+.history-header {
+    background: rgba(20, 20, 20, 0.9);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #D4AF37;
+}
+
+.history-header .logo-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.history-header .logo {
+    height: 60px;
+    margin-right: 1rem;
+}
+
+.history-header h1 {
+    font-family: 'Cinzel', serif;
+    color: #D4AF37;
+    margin: 0;
+}
+
+/* GŁÓWNA ZAWARTOŚĆ */
+.history-main {
     max-width: 900px;
-    width: 100%;
-    padding: 3rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
     border-radius: 15px;
-    margin: 2rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
-/* STYLIZACJA TEKSTU */
 .history-content h2 {
-    color: #f5d742;
-    font-family: 'Cinzel Decorative', cursive;
-    font-size: 2.8rem;
+    font-family: 'Cinzel', serif;
+    color: #D4AF37;
+    font-size: 2.5rem;
     text-align: center;
     margin-bottom: 3rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-bottom: 2px solid rgba(245, 215, 66, 0.5);
-    padding-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* TEKST HISTORYCZNY */
+.history-text {
+    font-size: 1.1rem;
+}
+
+.history-text p {
+    margin-bottom: 1.8rem;
 }
 
 .lead {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
     text-align: center;
     margin: 3rem 0;
-    color: #f5d742;
+    color: #F5D742;
     letter-spacing: 0.5px;
 }
 
+/* ELEMENTY SPECJALNE */
 .timeline-item {
     padding: 2rem;
-    margin: 3rem 0;
-    background: rgba(20, 20, 20, 0.4); /* Ciemne tło dla lepszej czytelności */
-    border-left: 4px solid #f5d742;
+    margin: 2.5rem 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-left: 4px solid #D4AF37;
     border-radius: 0 8px 8px 0;
 }
 
 .timeline-item h3 {
-    color: #f5d742;
-    font-size: 1.8rem;
-    margin-top: 0;
     font-family: 'Cinzel', serif;
+    color: #D4AF37;
+    font-size: 1.5rem;
+    margin-top: 0;
 }
 
-/* DODATKOWE ELEMENTY STYLIZACYJNE */
 .highlight {
-    background: rgba(100, 80, 0, 0.3); /* Złote tło dla wyróżnionych sekcji */
-    box-shadow: 0 0 15px rgba(245, 215, 66, 0.2);
+    background: rgba(212, 175, 55, 0.1);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
 }
 
 .villain {
-    color: #ff6b6b;
+    color: #FF6B6B;
     font-weight: bold;
 }
 
 .hero {
-    color: #a8e6cf;
+    color: #A8E6CF;
     font-weight: bold;
 }
 
 .epic-quote {
     font-style: italic;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     padding: 2rem;
-    border-left: 4px solid #f5d742;
-    background: rgba(0, 0, 0, 0.3);
     margin: 3rem 0;
     text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    border-left: 4px solid #D4AF37;
+    border-right: 4px solid #D4AF37;
+}
+
+/* STOPKA */
+.history-footer {
+    background: rgba(20, 20, 20, 0.9);
+    color: #D4AF37;
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid #D4AF37;
+    font-family: 'Cinzel', serif;
 }
 
 /* RESPONSYWNOŚĆ */
 @media (max-width: 768px) {
-    .history-content {
-        padding: 1.5rem;
+    .history-main {
         margin: 1rem;
-        backdrop-filter: blur(3px);
+        padding: 1.5rem;
+        backdrop-filter: blur(5px);
     }
     
     .history-content h2 {
         font-size: 2rem;
+    }
+    
+    .lead {
+        font-size: 1.2rem;
+    }
+    
+    .timeline-item {
+        padding: 1.5rem;
     }
 }
