@@ -17,6 +17,62 @@
     font-family: 'Marcellus', serif;
     line-height: 1.8;
 }
+/* --- MENU NAWIGACYJNE --- */
+.history-header nav {
+    background: rgba(44, 62, 80, 0.9); /* Ciemne tło */
+    padding: 1rem 0;
+    margin-top: 1rem;
+    border-top: 1px solid #D4AF37;
+    border-bottom: 1px solid #D4AF37;
+}
+
+.history-header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    gap: 2rem;
+}
+
+.history-header nav a {
+    color: #D4AF37;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.history-header nav a:hover {
+    color: #F5D742;
+}
+
+.history-header nav a.active {
+    font-weight: 700;
+    color: #F5D742;
+}
+
+.history-header nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #F5D742;
+    transition: width 0.3s;
+}
+
+.history-header nav a:hover::after,
+.history-header nav a.active::after {
+    width: 100%;
+}
 
 /* NAGŁÓWEK */
 .history-header {
