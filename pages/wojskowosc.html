@@ -7,10 +7,25 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../wojskowosc.css">
     <link rel="icon" href="../images/herb.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Marcellus&display=swap" rel="stylesheet">
 </head>
 <body class="military-page">
     <header class="military-header">
-        <!-- To samo menu co w historii -->
+        <div class="logo-container">
+            <img src="../images/logo.png" alt="Herb" class="logo">
+            <h1>Wielkie Księstwo Gragasowe</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Strona Główna</a></li>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="wojskowosc.html" class="active">Wojskowość</a></li>
+                <li><a href="mapa.html">Mapa</a></li>
+                <li><a href="kultura.html">Kultura</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main class="military-main">
@@ -19,7 +34,10 @@
             
             <!-- Marszałek -->
             <div class="rank-card marshal">
-                <div class="rank-badge">⚔️</div>
+                <div class="rank-portrait">
+                    <img src="../images/marszalek.jpg" alt="Marszałek Szejson Żeżański">
+                    <div class="rank-badge">⚔️</div>
+                </div>
                 <div class="rank-content">
                     <h3>Marszałek Gragasowy</h3>
                     <p class="rank-name">Szejson Żeżański</p>
@@ -27,7 +45,7 @@
                     <div class="rank-details">
                         <p>• Dowodzi wszystkimi rodzajami wojsk</p>
                         <p>• Bezpośrednio podległy tylko Wielkiemu Księciu</p>
-                        <p>• Bardzo dużo lat służby</p>
+                        <p>• W czynnej służbie od wieków</p>
                     </div>
                 </div>
             </div>
@@ -35,32 +53,42 @@
             <!-- Generałowie -->
             <div class="generals-grid">
                 <div class="rank-card general">
-                    <h3>Generał Wojsk Powietrznych</h3>
-                    <p class="rank-name">Antol Żeżański</p>
-                    <div class="rank-details">
-                        <p>• Dowodzi flotą powietrzną</p>
-                        <p>• Ekspert od strategii powietrznych</p>
-                        <p>• Krótki Staż</p>
+                    <div class="rank-portrait">
+                        <img src="../images/general1.jpg" alt="Generał Antol Żeżański">
+                        <div class="specialization">🦅</div>
                     </div>
-                    <div class="specialization">🦅</div>
+                    <div class="rank-content">
+                        <h3>Generał Wojsk Powietrznych</h3>
+                        <p class="rank-name">Antol Żeżański</p>
+                        <div class="rank-details">
+                            <p>• Dowodzi flotą powietrzną</p>
+                            <p>• Ekspert od strategii powietrznych</p>
+                            <p>• Krótki Staż</p>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="rank-card general">
-                    <h3>Generał Wojsk Wsparcia</h3>
-                    <p class="rank-name">Rolek "Poziomka" Żeżański</p>
-                    <div class="rank-details">
-                        <p>• Dowodzi logistyką i zaopatrzeniem</p>
-                        <p>• Mistrz taktyk obronnych</p>
-                        <p>• Średni staż</p>
+                    <div class="rank-portrait">
+                        <img src="../images/general2.jpg" alt="Generał Rolek Żeżański">
+                        <div class="specialization">🛡️</div>
                     </div>
-                    <div class="specialization">🛡️</div>
+                    <div class="rank-content">
+                        <h3>Generał Wojsk Wsparcia</h3>
+                        <p class="rank-name">Rolek "Poziomka" Żeżański</p>
+                        <div class="rank-details">
+                            <p>• Dowodzi logistyką i zaopatrzeniem</p>
+                            <p>• Mistrz taktyk obronnych</p>
+                            <p>• Średni Staż</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="military-footer">
-        <!-- Stopka jak w historii -->
+        <p>&copy; 2023 Wielkie Księstwo Gragasowe. Wszelkie prawa zastrzeżone.</p>
     </footer>
 </body>
 </html>
