@@ -5,12 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historia - Wielkie Księstwo Gragasowe</title>
     <link rel="stylesheet" href="../style.css">
-    <!-- Dodatkowy CSS tylko dla tej podstrony -->
     <link rel="stylesheet" href="../historia.css">
     <link rel="icon" href="../images/herb.png" type="image/png">
+    <style>
+        /* Tylko dla podglądu - finalnie w historia.css */
+        body.history-page {
+            background: url('../images/historia/tlo-historia.jpg') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Georgia', serif;
+        }
+    </style>
 </head>
-<body>
-    <header>
+<body class="history-page">
+    <header class="history-header">
         <div class="logo-container">
             <img src="../images/logo.png" alt="Herb Wielkiego Księstwa Gragasowego" class="logo">
             <h1>Wielkie Księstwo Gragasowe</h1>
@@ -18,7 +27,7 @@
         <nav>
             <ul>
                 <li><a href="../index.html">Strona Główna</a></li>
-                <li><a href="historia.html">Historia</a></li>
+                <li><a href="historia.html" class="active">Historia</a></li>
                 <li><a href="wojskowosc.html">Wojskowość</a></li>
                 <li><a href="mapa.html">Mapa</a></li>
                 <li><a href="kultura.html">Kultura</a></li>
@@ -26,89 +35,78 @@
         </nav>
     </header>
 
-    <!-- Sekcja z tłem i historią -->
-    <section class="history-hero">
+    <main class="history-main">
         <div class="history-content">
-            <!-- MIEJSCE NA TWOJĄ HISTORIĘ -->
             <h2>Dzieje Księstwa</h2>
-      <div class="history-text">
-            <p class="lead">W Wielkim Księstwie Gragasowym, od wieków zmagającym się z atakami Imperium Lux i nieugiętym Jaxem, historia była pełna boju i cierpienia.</p>
             
-            <div class="timeline-item">
-                <h3>500 rok: Rewolucja Gragasowa</h3>
-                <p>Od czasów Wielkiego Księcia Gragasa VII, który w 500 roku przeprowadził rewolucję Gragasową, ludzie mieli nadzieję na lepsze jutro.</p>
+            <!-- Początek Twojej historii -->
+            <div class="history-text">
+                <p class="lead">W Wielkim Księstwie Gragasowym, od wieków zmagającym się z atakami Imperium Lux i nieugiętym Jaxem, historia była pełna boju i cierpienia.</p>
+                
+                <div class="timeline-item">
+                    <h3>500 rok: Rewolucja Gragasowa</h3>
+                    <p>Od czasów Wielkiego Księcia Gragasa VII, który w 500 roku przeprowadził rewolucję Gragasową, ludzie mieli nadzieję na lepsze jutro.</p>
+                </div>
+                
+                <div class="timeline-item highlight">
+                    <h3>1000 rok: Wielka Inwazja</h3>
+                    <p>Po latach pokoju i stabilności, w roku 1000 nastał czas zagrożenia. Przywódca Państwa Jaxowego, <span class="villain">Jax Hiberyjczyk V</span>, wzmocniony nowymi sojuszami, zdecydował się na bezwzględny atak na Wielkie Księstwo Gragasowe. Jego celem nie była tylko dominacja, lecz także porwanie królowej Annie, żony Gragasa VIII.</p>
+                </div>
+                
+                <div class="battle-description">
+                    <img src="../images/historia/bitwa.jpg" alt="Bitwa z Jaxem" class="battle-image">
+                    <div>
+                        <p>W obliczu tego dramatu, obecny król <span class="hero">Gragas VIII</span> i jego marszałek <span class="hero">Szejson</span> podjęli heroiczną próbę ratowania królowej i ocalenia swojego socjalistycznego państwa. Wysłali swoje wojska na front, gotowe do walki o wolność i honor.</p>
+                    </div>
+                </div>
+                
+                <blockquote class="epic-quote">
+                    "Na polu bitwy, wśród huku mieczy i krzyków rannych, Gragasowe wojska walczyły z odwagą i determinacją."
+                </blockquote>
+                
+                <p>Król <span class="hero">Gragas VIII</span> i marszałek <span class="hero">Szejson</span> prowadzili swój lud, nie cofając się przed żadnym wyzwaniem.</p>
+                
+                <div class="ideals-box">
+                    <p>W czasie tej heroicznej bitwy, Gragasowi żołnierze nie tylko walczyli o wyzwolenie Annie, lecz także broniły ideałów socjalizmu i równości, które były fundamentem ich państwa.</p>
+                </div>
+                
+                <div class="dark-chapter">
+                    <h3>Smutny rozdział</h3>
+                    <p>Mimo potężnego oporu ze strony króla Gragasa VIII i marszałka Szejsona nie udało się odbić Annie spod jarzma Jaxa Hiberyjczyka V. Przez co wróg czuł się pewnie.</p>
+                </div>
+                
+                <div class="conclusion">
+                    <p>Choć straty były wielkie, a rany trudne do zagojenia, Wielkie Księstwo Gragasowe przetrwało. W sercach jego ludzi płonęła nadzieja na lepsze jutro, a historia ich walki przeszła do legendy jako opowieść o odwadze, poświęceniu i niezłomnej wierze w ideały socjalizmu.</p>
+                    <p class="cliffhanger">Jednakże, nawet po odzyskaniu wolności, przed Gragasami stawały kolejne wyzwania...</p>
+                </div>
             </div>
-            
-            <div class="timeline-item highlight">
-                <h3>1000 rok: Wielka Inwazja</h3>
-                <p>Po latach pokoju i stabilności, w roku 1000 nastał czas zagrożenia. Przywódca Państwa Jaxowego, <span class="villain">Jax Hiberyjczyk V</span>, wzmocniony nowymi sojuszami, zdecydował się na bezwzględny atak na Wielkie Księstwo Gragasowe. Jego celem nie była tylko dominacja, lecz także porwanie królowej Annie, żony Gragasa VIII.</p>
-            </div>
-            
-            <div class="battle-description">
-                <img src="../images/historia/bitwa.jpg" alt="Bitwa z Jaxem" class="battle-image">
-                <p>W obliczu tego dramatu, obecny król <span class="hero">Gragas VIII</span> i jego marszałek <span class="hero">Szejson</span> podjęli heroiczną próbę ratowania królowej i ocalenia swojego socjalistycznego państwa. Wysłali swoje wojska na front, gotowe do walki o wolność i honor.</p>
-            </div>
-            
-            <blockquote class="epic-quote">
-                "Na polu bitwy, wśród huku mieczy i krzyków rannych, Gragasowe wojska walczyły z odwagą i determinacją."
-            </blockquote>
-            
-            <p>Król <span class="hero">Gragas VIII</span> i marszałek <span class="hero">Szejson</span> prowadzili swój lud, nie cofając się przed żadnym wyzwaniem.</p>
-            
-            <div class="ideals-box">
-                <p>W czasie tej heroicznej bitwy, Gragasowi żołnierze nie tylko walczyli o wyzwolenie Annie, lecz także broniły ideałów socjalizmu i równości, które były fundamentem ich państwa.</p>
-            </div>
-            
-            <div class="dark-chapter">
-                <h3>Smutny rozdział</h3>
-                <p>Mimo potężnego oporu ze strony króla Gragasa VIII i marszałka Szejsona nie udało się odbić Annie spod jarzma Jaxa Hiberyjczyka V. Przez co wróg czuł się pewnie.</p>
-            </div>
-            
-            <div class="conclusion">
-                <p>Choć straty były wielkie, a rany trudne do zagojenia, Wielkie Księstwo Gragasowe przetrwało. W sercach jego ludzi płonęła nadzieja na lepsze jutro, a historia ich walki przeszła do legendy jako opowieść o odwadze, poświęceniu i niezłomnej wierze w ideały socjalizmu.</p>
-                <p class="cliffhanger">Jednakże, nawet po odzyskaniu wolności, przed Gragasami stawały kolejne wyzwania...</p>
-            </div>
+            <!-- Koniec Twojej historii -->
         </div>
-            <!-- KONIEC HISTORII -->
-        </div>
-    </section>
+    </main>
 
-    <!-- Sekcja z żonami -->
-    <section class="wives-section">
-        <h2>Żony Gragasa</h2>
-        <p>Poznaj wpływowe kobiety które kształtowały historię księstwa</p>
-        
-        <div class="wives-grid">
-            <div class="wife-card">
-                <img src="../images/historia/zona1.jpg" alt="Pierwsza żona" class="wife-image">
-                <div class="wife-info">
-                    <h3>Ludwika z Doliny</h3>
-                    <p>Pierwsza małżonka Gragasa I, matka następcy tronu. Znana z reform edukacyjnych.</p>
-                </div>
+    <footer class="history-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>O Księstwie</h3>
+                <p>Wielkie Księstwo Gragasowe to kwitnąca kraina z bogatą historią i kulturą.</p>
             </div>
-            
-            <div class="wife-card">
-                <img src="../images/historia/zona2.jpg" alt="Druga żona" class="wife-image">
-                <div class="wife-info">
-                    <h3>Elżbieta Błyskawica</h3>
-                    <p>Wojownicza królowa, dowodziła obroną twierdzy podczas wielkiego oblężenia.</p>
-                </div>
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p>Email: kontakt@gragasowe.ks</p>
+                <p>Telefon: +48 123 456 789</p>
             </div>
-            
-            <div class="wife-card">
-                <img src="../images/historia/zona3.jpg" alt="Trzecia żona" class="wife-image">
-                <div class="wife-info">
-                    <h3>Anna Szafranowa</h3>
-                    <p>Mecenaska sztuki, założycielka słynnej biblioteki królewskiej.</p>
+            <div class="footer-section">
+                <h3>Social Media</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="../images/facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="../images/twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="../images/instagram-icon.png" alt="Instagram"></a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <footer>
-        <!-- Stopka taka sama jak na index.html -->
+        <div class="footer-bottom">
+            <p>&copy; 2023 Wielkie Księstwo Gragasowe. Wszelkie prawa zastrzeżone.</p>
+        </div>
     </footer>
-
-    <script src="../script.js"></script>
 </body>
 </html>
