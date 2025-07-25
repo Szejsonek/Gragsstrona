@@ -4,20 +4,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const newsData = [
         {
             title: "Uroczystości Dnia Księstwa",
-            date: "15 maja 2023",
-            excerpt: "W tym roku obchody Dnia Księstwa odbędą się z szczególnym rozmachem. Zapraszamy wszystkich obywateli na główny plac stolicy.",
+            date: "25 lipca 2025",
+            excerpt: "W tym roku obchody Dnii Gragasji Zostały przesunięte.",
             image: "images/news1.jpg"
         },
         {
-            title: "Nowy Marszałek Wojsk Gragasowych",
-            date: "3 maja 2023",
-            excerpt: "Generał Marcin Kowalski został mianowany nowym Marszałkiem Wojsk Gragasowych. Ceremonia odbyła się w Pałacu Książęcym.",
+            title: "Rozmowy Marszałka Szejsona",
+            date: "25.07 lipca 2025",
+            excerpt: "Jego Ekstelencja Marszałek Szejson odbywa ważne rozmowy w sprawie obchodów Święta Miasta Gragasji .",
             image: "images/news2.jpg"
         },
         {
-            title: "Otwarcie Muzeum Historii Księstwa",
-            date: "22 kwietnia 2023",
-            excerpt: "Po latach przygotowań, wreszcie otwarto nowoczesne Muzeum Historii Księstwa Gragasowego. Zapraszamy do zwiedzania!",
+            title: "Nowi prezesi",
+            date: "12 czerwca 2025",
+            excerpt: "Na ostatnim posiedzeniu Sejmu ustalono nowych prezesów : Generał Poziomka (IKIDG) , Pan buszon(DBW), Pan Mariusz(ANG)",
             image: "images/news3.jpg"
         }
     ];
